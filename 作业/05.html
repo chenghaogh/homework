@@ -9,14 +9,63 @@
         *{margin: 0;margin:0;}
     .header{
         height: 70px;
-        background: #18BEBE url("image/logo3.png") no-repeat center center;
+        background: #18BEBE url("images/logo.png") no-repeat center center;
     }
-    .menu{   
+    .nav{
         width: 1440px;
+        height: 40px;
+        background:#F7F7F7;
+    }
+    .nav-wrap{
+        width: 1000px;   
+        height: 40px;
         font-size: 16px;
-        line-height: 30px;
-        background:#F1EFF0;
-    } 
+        line-height: 40px;
+        background:#F7F7F7;
+        text-align: center;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .nav-wrap a{
+        text-decoration: none;
+        color: #333;
+    }
+    .location,.adm{
+        position: absolute;
+        top:50%;
+        margin-top: -9.5px;
+        display: inline-block;
+        width:19px;
+        height: 19px;
+    }
+    .location{
+        background: url("images/location.png");left: 15px;
+    }
+    .adm{
+        background: url("images/adm.png");right: 60px;
+    }
+    .left{
+        position: absolute;
+        left: 0;
+    }
+    .right{
+        position:absolute;
+        right: 0;
+    }
+    .left a{
+        margin-left: 35px;
+        font-size: 12px;
+    }
+    
+    .right a{
+        margin-right: 10px;
+        font-size: 12px;
+    }
+    .menu{
+        margin-left: 35px;
+        margin-right: 35px;
+    }
     a:link{
         color:black;
     }
@@ -81,14 +130,16 @@
         }
         .a1:hover{
             background: white;
-            border: 1px solid orange;
+            border: 2px solid orange;
         }
         .a2{
             color: #333;
+            text-decoration: none;
             margin-left: 10px;
             margin-right: 10px;
         }
         .a2:hover{
+            text-decoration: underline;
             color: orange;
         } 
        .a3{
@@ -137,6 +188,7 @@
             width: 20px;
             border:1px solid black;
             margin: 5px;
+            outline: none;
         }
         .img2{
             float:left;
@@ -157,14 +209,7 @@
         div{
             box-sizing: border-box;
         }
-        .div1{
-            width: 900px;
-            margin-left: 50px;
-            margin-right: 50px;
-            margin-left: auto;
-            margin-right: auto;
-            text-align: center;
-        }
+        
         .div1 a{
             color: #333;
             text-decoration: none;
@@ -178,13 +223,13 @@
         }
         .div2>.p1{
             font-size: 15px;
-            color: rgb(117, 113, 113);
+            color: gray;
             margin: 10px;
         }
         .div3{
             width: 1000px;
             height: 176px;
-            background:rgb(243, 243, 243);
+            background:#F7F7F7;
             margin-left: auto;
             margin-right: auto;
             margin-bottom: 20px;
@@ -269,7 +314,7 @@
             color: #18BEBE;
         }
         .p8:hover{
-            color: #f1b02c;
+            color: orange;
         }
         .p9{
             font-size: 12px;
@@ -282,10 +327,10 @@
             margin-left: 10px;
         }
         .spa1{
+            margin-left: 230px;
+            margin-right: 400px;
             color: white;
             font-size: 12px;
-            margin-right:380px;
-            margin-left: 230px;
         }
         .spa2{
             color: white;
@@ -305,24 +350,86 @@
             width: 1440px;
             
         }
-        .inp{
-            margin-left: 50px;
-            width: 250px;
-            height: 20px;
+        .search{
+            margin-top: -35px;
+            margin-left: 330px;
+            width: 300px;
+            height: 24px;
             border: 1px solid rgb(163, 156, 156);
+            background:white;
+            position: relative;
+        }
+        .inp{
+            position: absolute;
+            width: 240px;
+            height: 20px;
+            border: none;
+            
+        }
+        .btn3{position: absolute;
+            width: 20px;
+            top: 50%;
+            right: 40px;
+            margin-top: -10px;
+            height: 20px;
+            border: none;
+            background: url("images/search.png") no-repeat center center;
+
+        }
+        .btn4{
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            right: 0;
+            margin-top: -10px;
+            height: 20px;
+            border: none;
+            background: white;
+        }
+        .help{
+            margin-left: 750px;
+            margin-top: -25px;
+            width: 220px;
+            height: 25px;
+            position: relative;
+            border: 1px solid #F7F7F7;
+        }
+        .help a{
+            display: block;
+            color: #18BEBE;
+            font-size: 14px;
+            margin-top: -12px;
+            margin-left: 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .s-help{
+            width: 19px;
+            height: 20px;
+            left: 0px;
+            top: 50%;
+            margin-top: -10px;
+            position: absolute;
+            background: url("images/wenhao.png") no-repeat center center;
         }
     </style>
 </head>
 <div class="boss">
     <div class="header"></div>
-    <div class="menu">
-        <div class="div1">
-            <img src="image/location.png" alt="" align="center"><span class="sp1">深圳<切换></span>
-            <a href="#">首页</a>
-            <a href="#">咨询</a>
-            <a href="#">测评</a>
-            <a href="#">商城</a>
-            <img src="image/adm.png" alt="" align="center"><span class="sp2">个人中心</span>
+    <div class="nav">
+        <div class="nav-wrap">
+            <div class="left">
+                <span class="location"></span>
+                <a href="#">深圳<span>&lt;切换&gt;</span></a>
+            </div>
+            <div class="right">
+                <span class="adm"></span>
+                <a href="#">个人中心</a>
+            </div>
+                <a href="#" class="menu">首页</a>
+                <a href="#" class="menu">咨询</a>
+                <a href="#" class="menu">测评</a>
+                <a href="#" class="menu">商城</a>
         </div>
     </div>
     <div class="div2">
@@ -332,7 +439,7 @@
         <table class="tab">
             <tr><th class="th">类别</th><td>全部</td><td><a href="#" class="a1">地板</a></td><td>涂料</td><td>墙纸</td>
                 <td>瓷砖</td><td>粘胶剂</td><td>油漆</td><td>家具</td><td>板材</td><td>饰品</td>
-            <td><img src="image/indexSelect.png" alt=""></td></tr>
+            <td><img src="images/indexSelect.png" alt=""></td></tr>
             <tr><th class="th">类型</th><td>全部</td></tr>
             <tr><th class="th">材质</th><td>全部</td><td><a href="#" class="a1">实木</a></td><td>复合</td><td>强化</td><td>其他</td></tr>
             <tr><th class="th">品牌</th><td>全部</td><td><a href="#" class="a1">圣像</a></td><td>大自然</td><td>生活家</td>
@@ -341,16 +448,24 @@
     </div>
     <div class="div11">
         <span class="spa3">发布时间</span>
-        <img src="image/downicon.png" alt="" align="center" class="img5">
+        <img src="images/downicon.png" alt="" align="center" class="img5">
         <span class="spa3">价格</span>
-        <img src="image/upicon.png" alt="" align="center" class="img5">
+        <img src="images/upicon.png" alt="" align="center" class="img5">
         <span class="spa3">环保节能</span>
-        <img src="image/downicon.png" alt="" align="center" class="img5">
-        <input type="text" class="inp">
+        <img src="images/downicon.png" alt="" align="center" class="img5">
+        <div class="search">
+            <input type="text" class="inp">
+            <button class="btn3"></button>
+            <button class="btn4">搜索</button>
+        </div>
+        <div class="help">
+            <span class="s-help"></span>
+            <a href="#">了解家居医生建材环保评级标准</a>
+        </div>
     </div>
     <div class="parent row">
             <div class="child">
-                <img src="image/data_image.png" alt="" class="image">
+                <img src="images/data_image.png" alt="" class="image">
             <a href="#" class="a3">
                 <p class="p7">德尔&nbsp;&nbsp;都市系列3001</p> 
                 <p class="p7">木地板 - 复合地板</p> 
@@ -359,7 +474,7 @@
             </a>
             </div>
             <div class="child">
-                <img src="image/data_image.png" alt="" class="image">
+                <img src="images/data_image.png" alt="" class="image">
                 <a href="#" class="a3">
                         <p class="p7">德尔&nbsp;&nbsp;都市系列3001</p> 
                         <p class="p7">木地板 - 复合地板</p> 
@@ -368,7 +483,7 @@
                     </a>
             </div>
             <div class="child">
-                <img src="image/data_image.png" alt="" class="image">
+                <img src="images/data_image.png" alt="" class="image">
                 <a href="#" class="a3">
                         <p class="p7">德尔&nbsp;&nbsp;都市系列3001</p> 
                         <p class="p7">木地板 - 复合地板</p> 
@@ -377,7 +492,7 @@
                     </a>
             </div>
             <div class="child1">
-                <img src="image/data_image.png" alt="" class="image">
+                <img src="images/data_image.png" alt="" class="image">
                 <a href="#" class="a3">
                         <p class="p7">德尔&nbsp;&nbsp;都市系列3001</p> 
                         <p class="p7">木地板 - 复合地板</p> 
@@ -387,7 +502,7 @@
             </div>
 
             <div class="child">
-                    <img src="image/data_image.png" alt="" class="image">
+                    <img src="images/data_image.png" alt="" class="image">
                     <a href="#" class="a3">
                             <p class="p7">德尔&nbsp;&nbsp;都市系列3001</p> 
                             <p class="p7">木地板 - 复合地板</p> 
@@ -396,7 +511,7 @@
                         </a>   
                </div>
                <div class="child">
-                   <img src="image/data_image.png" alt="" class="image">
+                   <img src="images/data_image.png" alt="" class="image">
                    <a href="#" class="a3">
                         <p class="p7">德尔&nbsp;&nbsp;都市系列3001</p> 
                         <p class="p7">木地板 - 复合地板</p> 
@@ -405,7 +520,7 @@
                     </a>
                </div>
                <div class="child">
-                   <img src="image/data_image.png" alt="" class="image">
+                   <img src="images/data_image.png" alt="" class="image">
                    <a href="#" class="a3">
                         <p class="p7">德尔&nbsp;&nbsp;都市系列3001</p> 
                         <p class="p7">木地板 - 复合地板</p> 
@@ -414,7 +529,7 @@
                     </a>
                </div>
                <div class="child1">
-                   <img src="image/data_image.png" alt="" class="image">
+                   <img src="images/data_image.png" alt="" class="image">
                    <a href="#" class="a3">
                         <p class="p7">德尔&nbsp;&nbsp;都市系列3001</p> 
                         <p class="p7">木地板 - 复合地板</p> 
@@ -435,7 +550,7 @@
             <button class="btn2">确定</button>
         </div>
         <div class="div5">
-            <img src="image/small_weixin.png" alt="" class="img2">
+            <img src="images/small_weixin.png" alt="" class="img2">
             <p class="p3">建材检测&nbsp;需求反馈</p>
             <p class="p4">亲爱的用户，我们正在不断的完善和更新建材库<br>
                 若没有找到您想要的材料信息，请将您想测得建材告诉我们。
@@ -444,11 +559,10 @@
     </div>
         <div class="div6">
             <div class="div7">
-                <img src="image/footerLogo.png" alt="" class="img3">
+                <img src="images/footerLogo.png" alt="" class="img3">
                 <p class="p5">为室内环境健康把好每一关</p>
                 <p class="p6">家居医生致力于中国人的家居健康问题，通过专业的技术研究
                     <br>和测评，倾力协助大众打造绿色、环保的人居生活环境</p>
-                  
             </div>
            <div class="div8">
                <a href="#" class="a5">关于我们</a>
@@ -459,9 +573,9 @@
                <a href="#" class="a5">免责申明</a>
             </div>
             <div class="div9">
-                <img src="image/weixin2.png" alt="" class="img4"><span class="spa">官方微信</span><br>
-                <img src="image/tianmao.png" alt="" class="img4"><span class="spa">天猫旗舰店</span><br>
-                <img src="image/shop.png" alt="" class="img4"><span class="spa">有赞商城</span>
+                <img src="images/weixin2.png" alt="" class="img4"><span class="spa">官方微信</span><br>
+                <img src="images/tianmao.png" alt="" class="img4"><span class="spa">天猫旗舰店</span><br>
+                <img src="images/shop.png" alt="" class="img4"><span class="spa">有赞商城</span>
             </div>
         </div>
     <div class="div10">
